@@ -1,0 +1,837 @@
+:root{
+  --mainColor:rgb(255, 119, 0)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+.widMar {
+  width: 90%;
+  margin: auto;
+}
+
+header .first-header {
+  background-color: #000;
+  overflow: hidden;
+}
+header .first-header .announcement {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  height: 5vh;
+}
+
+header .first-header .announcement .main-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .first-header .announcement .main-div div {
+  display: flex;
+  align-items: center;
+}
+
+header .second-header {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+header .second-header div.one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  padding: 15px 0;
+}
+header .second-header div.one h1,
+.div-one,
+.devices h3,
+.title span,
+.sort-div,
+.first-div .nest-div div i,
+.first div,
+.second div p,
+.btn button,
+.slides p,
+.div1 .nest-div p,
+.images .imge,
+i {
+  cursor: pointer;
+}
+header .second-header div.one form {
+  display: flex;
+  justify-content: center;
+  width: 35%;
+  position: relative;
+  transition: width 0.4s ease;
+}
+header .second-header div.one form input {
+  width: 100%;
+  padding: 10px 40px 10px 20px; /* زيادة padding يمين للأيقونة */
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+header .second-header div.one form i,
+footer .foot1 form i {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10.5px;
+  background-color: var(--mainColor);
+  width: 60px;
+  color: #fff;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+header .second-header div.two {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+header .second-header div.two .div-one {
+  background-color: var(--mainColor);
+  padding: 15px 10px;
+  width: 22%;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+}
+header .second-header div.two .devices {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  color: #0d0a0a7d;
+  transition: max-height 0.4s ease;
+  overflow: auto;
+  height: 7vh;
+}
+.devices-mobile {
+  max-height: 0;
+  opacity: 0; 
+  visibility: hidden; 
+  overflow: hidden; 
+  flex-direction: column;
+  background: #fff;
+  position: relative;
+  z-index: 999;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+.devices-mobile h3 {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+.devices-mobile h3:hover {
+  background-color: #ddd;
+  transition: 0.2s;
+}
+#toggle-devices {
+  display: none;
+}
+.burger {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none; /* hidden desktop */
+}
+.devices h3 {
+  padding:13px;
+  font-weight: 600;
+}
+.devices h3:hover {
+  background-color: #f1f1f1;
+  color: #000;
+  transition: 0.1s linear;
+}
+
+.settings-toggle {
+  position: fixed;
+  left: 0;
+  top: 95px;
+  background-color: #fff;
+  padding: 8px 0;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s linear;
+}
+
+main .title {
+  padding: 5px 0;
+  color: #3a2f2f4c;
+  font-size: 14px;
+}
+.title span:hover {
+  color: #000;
+  text-decoration: underline;
+  transition: 0.1s linear;
+}
+main h1 {
+  padding: 16px 0;
+  font-size: 22px;
+  color: gray;
+}
+main .all-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: self-start;
+  margin-bottom: 20px;
+}
+.all-content aside {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+}
+
+.all-content aside .first {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.all-content aside .first div div p:hover {
+  color: var(--mainColor);
+}
+.all-content aside .second div p:hover,
+.slides p:hover {
+  background-color: var(--mainColor) !important;
+  color: #fff !important;
+  border: none !important;
+  transition: 0.3s linear;
+}
+.all-content aside .first > div {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 8px;
+}
+.all-content aside div h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 16px;
+  font-size: 14px;
+}
+.all-content aside div div {
+  padding: 0 12px;
+}
+.all-content aside div div p {
+  color: grey;
+  font-size: 15px;
+}
+.all-content aside div div h6 {
+  padding: 9px 24px;
+  font-weight: bold;
+}
+.all-content .refine {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  color: gray;
+}
+.all-content h5 {
+  color: var(--mainColor);
+  padding: 8px 20px;
+}
+.all-content .slider {
+  border: 1px solid #ccc;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+  position: relative;
+}
+.all-content .slider div::before,
+.all-content .slider div::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--mainColor);
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 1000;
+}
+.all-content .slider div::before {
+  left: 20px;
+}
+.all-content .slider div::after {
+  right: 20px;
+}
+.all-content .slider div {
+  width: 80%;
+  margin: auto;
+  border: 1px solid var(--mainColor);
+}
+.all-content .price {
+  padding: 10px 18px;
+  font-size: 15px;
+}
+.all-content .end {
+  padding: 0;
+}
+.all-content aside .second {
+  padding: 50px 0;
+}
+.all-content aside .second > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+}
+.all-content aside .second div p {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 5px;
+}
+aside.open {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 50% !important;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  padding: 0 2px;
+  transform: translateX(0); /* يدخل */
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s linear;
+}
+
+.all-content section {
+  width: 80%;
+  padding: 0 25px;
+}
+.all-content section .first-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-content section .first-div .nest-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.all-content section .first-div .nest-div div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+img {
+  cursor: pointer;
+}
+.all-content section .first-div-mobile {
+  display: none;
+}
+.mobile-options {
+  display: none; /* مخفية افتراضياً */
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.mobile-options .nest-div p {
+  margin-left: 10px;
+}
+.all-content section .sort-div {
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #fff;
+  flex-shrink: 0;
+  width: fit-content;
+}
+.sort-div:hover {
+  background-color: #cec4c480 !important;
+  transition: 0.1s linear;
+}
+.all-content section .content {
+  background-color: #fff;
+  padding: 16px 5px;
+  margin: 15px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.card {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.card:hover .hide-card {
+  opacity: 1;              /* يظهر */
+  transform: translateY(-10px); 
+  pointer-events: auto;     /* يسمح بالتفاعل */
+}
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding:16px;
+  z-index: 1000;
+  transition: 0.4s linear;
+}
+.card:hover .card-content .hide-price {
+  opacity: 0;              /* السعر القديم يتلاشى */
+  transition: opacity 0.3s ease;
+}
+
+.hide-card {
+  opacity: 0;              /* مخفي بالشفافية */
+  transform: translateY(0); /* يتحرك شوي تحت */
+  pointer-events: none;    /* يمنع التفاعل وهو مخفي */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.hide-card .discount {
+  position: absolute;
+  top: -302px;
+  left: -26px;
+  background-color: red;
+  padding: 4px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.hide-card .discount p {
+  color: #fff;
+}
+.hide-card button {
+  background-color: rgb(255, 119, 0);
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  border: 0;
+  font-weight: 600;
+}
+.hide-card .new-price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+.hide-card span {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 6px;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s;
+}
+
+.card:hover img {
+  opacity: 0.75;
+}
+.card i {
+  color: gold;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  margin-top: 1rem;
+}
+
+.card-content h3 {
+  font-size: 0.875rem;
+  color: #374151;
+  margin: 0;
+}
+
+.card-content p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0.25rem 0 0 0;
+}
+
+.all-content section .btn {
+  padding: 20px 0;
+}
+.btn button:hover {
+  background-color: #f1f1f1 !important;
+  color: #000 !important;
+}
+.all-content section .btn button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: gray;
+}
+.all-content section .slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  color: black;
+}
+.all-content section .slides p {
+  background-color: #fff;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+}
+.all-content section .viewed h2 {
+  margin-bottom: 20px;
+  color: grey;
+}
+hr {
+  margin: 50px 0;
+  opacity: 0.2;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
+}
+
+main .footer1 {
+  margin-top: 15px;
+}
+main .footer1 .div1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  overflow: auto;
+}
+main .footer1 .div1 .nest-div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: darkgrey;
+  margin: 8px 0;
+}
+.div1 .nest-div p {
+  flex-shrink: 0;
+}
+.div1 .nest-div p:hover {
+  color: #000;
+}
+footer {
+  background-color: #000000dd;
+}
+footer .footer-content {
+  width: 90%;
+  margin: auto;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer-content .foot1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-size: 12px;
+}
+footer .footer-content .foot1 div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: fit-content;
+}
+footer p {
+  color: #ccc;
+  flex-shrink: 0;
+}
+footer .footer-content .foot1 div p:hover {
+  color: #f9f9f9;
+  cursor: pointer;
+}
+footer .foot1 form {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+footer .foot1 form input {
+  width: 100%;
+  padding: 11px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
+footer .special form i {
+  font-size: 18px;
+}
+
+footer .footer-content .foot2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+footer .foot2 p {
+  width: 50%;
+  font-size: 14px;
+}
+footer .foot2 div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+footer .footer-content .foot2 img {
+  width: 6%;
+}
+p {
+  flex-shrink: 0;
+}
+
+.grid-2-icon {
+  display: none;
+  grid-template-columns: repeat(2, 10px); /* 2 عمود */
+  grid-template-rows: repeat(2, 10px); /* 2 صف */
+  gap: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.grid-2-icon div {
+  background-color: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.grid-2-icon:hover div {
+  background-color: #ff6600;
+}
+
+/* تأثير عند النقر */
+.grid-2-icon.active div {
+  background-color: #007bff;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #4caf50, #45a049);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.login-btn i {
+  font-size: 18px;
+}
+
+.login-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
+}
+
+@media (max-width: 1020px) {
+  .first-header {
+    display: none;
+  }
+
+  header .second-header .one p {
+    display: none;
+  }
+  header .second-header .one form {
+    width: 65% !important;
+  }
+  .div-one {
+    flex: 1 1 30%;
+  }
+  .devices {
+    overflow: auto;
+  }
+  .settings-toggle {
+    display: block !important;
+  }
+  aside {
+    position: fixed;
+    transform: translateX(-100%); /* مخفي خارج الشاشة */
+    opacity: 0;
+    visibility: hidden;
+  }
+  .container {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+  }
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    margin-bottom: 15px;
+  }
+  .card {
+    flex: 0 0 10%; /* كل كارد 30% من عرض التابلت */
+    min-width: 200px; /* عرض أدنى للكارد */
+  }
+  .first-div-mobile {
+    display: flex;
+  }
+  .all-content section {
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+  .all-content section .grid {
+    width: 100% !important;
+  }
+  .special form input {
+    display: none;
+  }
+
+  form {
+    width: auto; /* يخلي الكونتينر على قد الزر */
+    padding: 10px;
+  }
+  footer form i {
+    color: #fff !important;
+    background-color: transparent !important;
+    left: 0;
+    padding-left: 0 !important;
+    text-align: justify !important;
+  }
+}
+/* Mobile */
+@media (max-width: 667px) {
+  .foot1 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+  .foot1 .special {
+    position: relative;
+    top: -40px;
+  }
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+  .hide {
+    display: none !important;
+  }
+  form input {
+    display: none;
+  }
+
+  form {
+    width: auto; 
+    padding: 10px;
+  }
+  header .second-header div.one form i {
+    color: #000;
+    background-color: transparent;
+  }
+  .two {
+    display: none !important;
+  }
+  .devices-mobile.active {
+    max-height: 500px; 
+    opacity: 1; 
+    visibility: visible;
+    overflow: auto;
+  }
+
+  .burger {
+    display: block; 
+  }
+  .first-div {
+    display: none !important;
+  }
+  .first-div-mobile {
+    flex-direction: column;
+  }
+
+  .first-div-mobile .mobile-options.active {
+    display: flex; /* تظهر عند الضغط */
+  }
+  .grid-2-icon {
+    display: grid !important; /* زر يظهر على الجوال */
+    cursor: pointer;
+  }
+  .first-div-mobile {
+    display: block !important;
+  }
+
+  .card {
+    flex: 0 0 70%; /* حجم الكارت أكبر قليلاً */
+    max-width: 200px;
+  }
+  .foot2 {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .foot2 p {
+    font-size: 11px !important;
+  }
+  .foot2 div {
+    justify-content: flex-start !important;
+  }
+  .second div {
+    display: block !important;
+    padding: 0 !important;
+  }
+  .second div p {
+    margin-bottom: 5px !important;
+  }
+}

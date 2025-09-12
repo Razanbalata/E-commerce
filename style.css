@@ -24,7 +24,7 @@ header .first-header {
 header .first-header .announcement {
   display: flex;
   justify-content: space-between;
-  color: #fff;
+  color: #ccc;
   height: 5vh;
 }
 
@@ -151,6 +151,16 @@ header .second-header div.two .devices {
   cursor: pointer;
   display: none; /* hidden desktop */
 }
+.login{
+  padding: 8px;
+  border-radius: 10px;
+  display: none;
+}
+.login:hover{
+  background-color: #4caf50;
+  color: #fff;
+  transition: .5s;
+}
 .devices h3 {
   padding:13px;
   font-weight: 600;
@@ -208,12 +218,12 @@ main .all-content {
 .all-content aside .first div div p:hover {
   color: var(--mainColor);
 }
-.all-content aside .second div p:hover,
-.slides p:hover {
+.second div p:hover
+{
   background-color: var(--mainColor) !important;
   color: #fff !important;
-  border: none !important;
-  transition: 0.3s linear;
+  transition: .3s;
+  border-color: var(--mainColor) !important;
 }
 .all-content aside .first > div {
   border-bottom: 1px solid #ccc;
@@ -517,6 +527,12 @@ img {
   padding: 5px 8px;
   border: 1px solid #ccc;
 }
+.slides p:hover{
+  background-color: var(--mainColor) !important;
+  color: #fff;
+  border-color:var(--mainColor) !important ;
+  transition: .3s;
+}
 .all-content section .viewed h2 {
   margin-bottom: 20px;
   color: grey;
@@ -644,36 +660,6 @@ p {
   background-color: #007bff;
 }
 
-.login-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: linear-gradient(90deg, #4caf50, #45a049);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-}
-
-.login-btn i {
-  font-size: 18px;
-}
-
-.login-btn:hover {
-  transform: translateY(2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.login-btn:active {
-  transform: translateY(1px);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-}
 
 @keyframes moveLeft {
   0% {
@@ -688,12 +674,17 @@ p {
   .first-header {
     display: none;
   }
-
+  .login{
+    display: block;
+  }
   header .second-header .one p {
     display: none;
   }
   header .second-header .one form {
     width: 65% !important;
+  }
+  header .second-header .one form i {
+    width: 33px !important;
   }
   .div-one {
     flex: 1 1 30%;
@@ -794,6 +785,9 @@ p {
 
   .burger {
     display: block; 
+  }
+  .login{
+    display: block;
   }
   .first-div {
     display: none !important;

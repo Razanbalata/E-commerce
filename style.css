@@ -116,13 +116,57 @@ header .second-header div.two .devices {
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  border-top: 1px solid #ccc;
   width: 100%;
   color: #0d0a0a7d;
   transition: max-height 0.4s ease;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
   height: 7vh;
 }
+
+.devices-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-top: 1px solid #ccc;
+
+}
+
+.devices {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  color: #0d0a0a7d;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.devices::-webkit-scrollbar {
+  display: none;
+}
+
+button.prev,
+button.next {
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+/* نبدأ مخفيين */
+button.prev,
+button.next {
+  display: none;
+}
+
 .devices-mobile {
   max-height: 0;
   opacity: 0; 
@@ -162,7 +206,7 @@ header .second-header div.two .devices {
   transition: .5s;
 }
 .devices h3 {
-  padding:13px;
+  padding:5.3px 12px;
   font-weight: 600;
 }
 .devices h3:hover {
@@ -524,7 +568,7 @@ img {
 }
 .all-content section .slides p {
   background-color: #fff;
-  padding: 5px 8px;
+  padding: 6px 10px;
   border: 1px solid #ccc;
 }
 .slides p:hover{
@@ -670,7 +714,7 @@ p {
   }
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .first-header {
     display: none;
   }
@@ -683,14 +727,12 @@ p {
   header .second-header .one form {
     width: 65% !important;
   }
-  header .second-header .one form i {
-    width: 33px !important;
-  }
+  
   .div-one {
     flex: 1 1 30%;
   }
   .devices {
-    overflow: auto;
+    overflow-x: auto;
   }
   .settings-toggle {
     display: block !important;
@@ -772,6 +814,7 @@ p {
   header .second-header div.one form i {
     color: #000;
     background-color: transparent;
+     width: 33px !important;
   }
   .two {
     display: none !important;

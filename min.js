@@ -181,8 +181,36 @@ function handleResize() {
     overlay.style.opacity = "0";
     overlay.style.pointerEvents = "none";
     devicesDesc.style.overflow = "auto";
-    devicesDesc.style.height = "8.3vh";
+    devicesDesc.style.height = "6.7vh";
   }
 }
 
 window.addEventListener("resize", handleResize);
+
+const scrollContainer = document.querySelector(".devices");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+function checkOverflow() {
+  if (scrollContainer.scrollWidth > scrollContainer.clientWidth) {
+    nextBtn.style.display = "block";
+    prevBtn.style.display = "block";
+  } else {
+    nextBtn.style.display = "none";
+    prevBtn.style.display = "none";
+  }
+}
+
+// عند تحميل الصفحة + تغيير حجم الشاشة
+checkOverflow();
+window.addEventListener("resize", checkOverflow);
+
+nextBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({ left: 200, behavior: "smooth" });
+});
+
+prevBtn.addEventListener("click", () => {
+  scrollContainer.scrollBy({ left: -200, behavior: "smooth" });
+});
+
+

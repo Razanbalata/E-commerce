@@ -79,6 +79,11 @@ header .second-header div.one form input {
   border: 1px solid #ccc;
   transition: width 0.4s ease, opacity 0.4s ease;
 }
+form input.open{
+  transform: translateY(2px);
+  opacity: 1;
+  visibility: visible;
+}
 header .second-header div.one form i,
 footer .foot1 form i {
   display: block;
@@ -809,7 +814,9 @@ p {
     display: none !important;
   }
   form input {
-    display: none;
+    transform: translateY(-100px);
+    opacity: 0;
+    visibility: hidden;
   }
 
   form {

@@ -158,6 +158,14 @@ toggleBtn.addEventListener("click", () => {
   toggles.style.display = " none";
 });
 
+const formIcon = document.querySelector("form i");
+const formInput = document.querySelector("form input");
+
+formIcon.addEventListener("click",()=>{
+  formInput.classList.toggle("open");
+  formIcon.style.display = "none";
+})
+
 let icon = document.querySelector(".settings-toggle");
 let list = document.querySelector("aside");
 let overlay = document.querySelector(".overlay");

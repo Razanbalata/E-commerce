@@ -111,6 +111,11 @@ header .second-header div.two .div-one {
   gap: 5px;
   flex-shrink: 0;
 }
+.one .flexes{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 header .second-header div.two .devices {
   display: flex;
   justify-content: flex-start;
@@ -262,7 +267,7 @@ main .all-content {
 .all-content aside .first div div p:hover {
   color: var(--mainColor);
 }
-.second div p:hover
+.second div p:hover,.second div p:active
 {
   background-color: var(--mainColor) !important;
   color: #fff !important;
@@ -462,7 +467,7 @@ img {
 }
 .card:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  padding:16px;
+  padding:10px;
   z-index: 1000;
   transition: 0.4s linear;
 }
@@ -479,8 +484,8 @@ img {
 }
 .hide-card .discount {
   position: absolute;
-  top: -302px;
-  left: -26px;
+  top: -306px;
+  left: -20px;
   background-color: red;
   padding: 4px;
   border-bottom-right-radius: 20px;

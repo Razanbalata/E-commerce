@@ -163,7 +163,7 @@ const formInput = document.querySelector("form input");
 
 formIcon.addEventListener("click",()=>{
   formInput.classList.toggle("open");
-  formIcon.style.display = "none";
+  formIcon.classList.toggle("active");
 })
 
 let icon = document.querySelector(".settings-toggle");

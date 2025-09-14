@@ -96,7 +96,9 @@ footer .foot1 form i {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
-
+div.one form i.active{
+  right: 20px !important;
+}
 header .second-header div.two {
   display: flex;
   justify-content: flex-start;

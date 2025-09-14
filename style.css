@@ -745,6 +745,10 @@ p {
   .div-one {
     flex: 1 1 30%;
   }
+  .flexes.mg{
+    justify-content: end;
+    margin: 0;
+  }
   .devices {
     overflow-x: auto;
   }
@@ -791,6 +795,7 @@ p {
   form {
     width: auto; /* يخلي الكونتينر على قد الزر */
     padding: 10px;
+    left: 48px;
   }
   footer form i {
     color: #fff !important;
@@ -826,11 +831,15 @@ p {
   form {
     width: auto; 
     padding: 10px;
+    left: 0;
   }
   header .second-header div.one form i {
     color: #000;
     background-color: transparent;
      width: 33px !important;
+  }
+  .flexes.mg{
+    width: 0;
   }
   .two {
     display: none !important;

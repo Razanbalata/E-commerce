@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Commerce</title>
+
+    <!-- Font Awesome CDN for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <!-- Overlay for potential modals or dropdown background -->
     <div class="overlay"></div>
+
+    <!-- HEADER SECTION -->
     <header>
+      <!-- First header: contact info and quick links -->
       <div class="first-header">
         <div class="ticker announcement widMar">
           <div class="main-div">
+            <!-- Contact info -->
             <div><i class="fa fa-phone"></i> (+800) 123 456 7890</div>
             <div><i class="fa-solid fa-envelope"></i> manager@shop.com</div>
           </div>
           <div class="main-div">
+            <!-- Quick links -->
             <div><i class="fa-solid fa-location-dot"></i> Location</div>
             <div><i class="fa-solid fa-blog"></i> Blog</div>
             <div><i class="fa-solid fa-shield"></i> Gurantee</div>
@@ -29,58 +40,77 @@
           </div>
         </div>
       </div>
+
+      <!-- Second header: logo, search, cart, categories -->
       <div class="second-header">
         <div class="widMar">
           <div class="one">
+            <!-- Logo and description -->
             <div class="flexes">
               <h1><span style="color: rgb(255, 119, 0)">YOU</span>SHOP</h1>
-            <p style="width: 150px">Description of your online store</p>
+              <p style="width: 150px">Description of your online store</p>
             </div>
+
+            <!-- Search bar -->
             <form action="">
               <input type="text" placeholder="Search" />
               <i class="fa fa-search"></i>
             </form>
+
+            <!-- Contact info + cart + wishlist -->
             <div class="flexes mg">
               <p style="width: 150px; color: rgb(255, 119, 0); font-weight: bold">
-              7 days a week from 8:00 am to 5:00 pm
-            </p>
-            <div class="hide"><i class="fa-regular fa-heart" style="font-size: 20px;"></i></div>
-            <div
-              style="
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 5px;
-              "
-              class="hide"
-            >
-              <i class="fa-solid fa-cart-shopping" style="font-size: 20px"></i>
-              <p style="margin-top: 3px">
-                My cart <br />
-                $ 0.00
+                7 days a week from 8:00 am to 5:00 pm
               </p>
+              <div class="hide">
+                <i class="fa-regular fa-heart" style="font-size: 20px"></i>
+              </div>
+              <div
+                style="display: flex; justify-content: center; align-items: center; gap: 5px;"
+                class="hide"
+              >
+                <i class="fa-solid fa-cart-shopping" style="font-size: 20px"></i>
+                <p style="margin-top: 3px">
+                  My cart <br /> $ 0.00
+                </p>
+              </div>
             </div>
-            </div>
+
+            <!-- User icon -->
             <div class="login"><i class="fa-solid fa-user"></i></div>
-            <i class="fa fa-bars burger"></i>
+
+            <!-- Categories dropdown -->
+            <div class="categories-dropdown">
+              <button class="category-btn">
+                <!-- Folder icon + label + caret -->
+                <i class="fa fa-folder"></i>
+                Categories
+                <i class="fa fa-caret-down" style="margin-left: 10px"></i>
+              </button>
+
+              <!-- Dropdown list of categories -->
+              <div class="categories-list">
+                <h3>Apple</h3>
+                <h3>Samsung</h3>
+                <h3>Meizu</h3>
+                <h3>Xiaomi</h3>
+                <h3>Honor</h3>
+                <h3>Huawei</h3>
+                <h3>Asus</h3>
+                <h3>Nokia</h3>
+                <h3>Motorola</h3>
+                <h3>Caterpillar</h3>
+              </div>
+            </div>
           </div>
-          <div class="devices-mobile">
-            <h3>Apple</h3>
-            <h3>Samsung</h3>
-            <h3>Meizu</h3>
-            <h3>Xiaomi</h3>
-            <h3>Honor</h3>
-            <h3>Huawei</h3>
-            <h3>Asus</h3>
-            <h3>Nokia</h3>
-            <h3>Motoroia</h3>
-            <h3>Caterpillar</h3>
-          </div>
+
+          <!-- Sidebar / secondary nav for All Categories + carousel -->
           <div class="two">
             <div class="div-one"><i class="fa fa-bars"></i> All Categories</div>
             <div class="devices-wrapper">
               <button class="prev"><i class="fa fa-chevron-left"></i></button>
               <div class="devices">
+                <!-- Device categories carousel -->
                 <h3>Apple</h3>
                 <h3>Samsung</h3>
                 <h3>Meizu</h3>
@@ -99,30 +129,38 @@
       </div>
     </header>
 
+    <!-- MAIN SECTION -->
     <main>
+      <!-- Settings toggle icon -->
       <div class="settings-toggle">
         <i class="fa-solid fa-chevron-right"></i>
       </div>
+
       <div class="widMar">
+        <!-- Breadcrumb navigation -->
         <p class="title">
           <span>Home</span> / <span>Categories</span> /
           <span>Tablet & Laptops Acceccories</span>
         </p>
 
+        <!-- Main heading -->
         <h1>Tablet & Laptops Acceccories</h1>
+
+        <!-- All content container -->
         <div class="all-content">
+          <!-- Sidebar for filters -->
           <aside>
             <div class="first">
+              <!-- Related categories -->
               <div>
-                <h3>
-                  <i class="fa-solid fa-caret-down"></i> Related Categories
-                </h3>
+                <h3><i class="fa-solid fa-caret-down"></i> Related Categories</h3>
                 <div>
                   <p><i class="fa-solid fa-caret-left"></i>Categories</p>
                   <h6>Tablet & Laptops Acceccories</h6>
                 </div>
               </div>
 
+              <!-- Refine by -->
               <div>
                 <h3><i class="fa-solid fa-caret-down"></i> Refine by</h3>
                 <div class="refine">
@@ -132,6 +170,7 @@
                 <h5>Clear All</h5>
               </div>
 
+              <!-- Price filter -->
               <div>
                 <h3><i class="fa-solid fa-caret-down"></i> Price</h3>
                 <div class="slider">
@@ -140,6 +179,7 @@
                 <p class="price">Price:$55 - $5000</p>
               </div>
 
+              <!-- Operating System filter -->
               <div style="display: flex; flex-direction: column">
                 <h3><i class="fa-solid fa-caret-down"></i> Operating System</h3>
                 <div>
@@ -150,6 +190,7 @@
                 </div>
               </div>
 
+              <!-- Screen Size filter -->
               <div style="display: flex; flex-direction: column">
                 <h3><i class="fa-solid fa-caret-down"></i> Screen Size</h3>
                 <div>
@@ -163,31 +204,22 @@
                 </div>
               </div>
 
+              <!-- Additional filters (Processor, Data Capacity) -->
               <div>
-                <h3 class="end">
-                  <i class="fa-solid fa-caret-down"></i> Processor Core
-                </h3>
+                <h3 class="end"><i class="fa-solid fa-caret-down"></i> Processor Core</h3>
               </div>
-
               <div>
-                <h3 class="end">
-                  <i class="fa-solid fa-caret-down"></i> Tablet Data Capacity
-                </h3>
+                <h3 class="end"><i class="fa-solid fa-caret-down"></i> Tablet Data Capacity</h3>
               </div>
-
               <div>
-                <h3 class="end">
-                  <i class="fa-solid fa-caret-down"></i> Processor Core
-                </h3>
+                <h3 class="end"><i class="fa-solid fa-caret-down"></i> Processor Core</h3>
               </div>
-
               <div>
-                <h3 class="end">
-                  <i class="fa-solid fa-caret-down"></i> Tablet Data Capacity
-                </h3>
+                <h3 class="end"><i class="fa-solid fa-caret-down"></i> Tablet Data Capacity</h3>
               </div>
             </div>
 
+            <!-- Product tags -->
             <div class="second">
               <h3>Product tag</h3>
               <div>
@@ -196,18 +228,14 @@
               </div>
               <div>
                 <p>xiaomi tablet</p>
-                <p
-                  style="
-                    color: rgb(255, 119, 0);
-                    border-color: rgb(255, 119, 0);
-                  "
-                >
-                  Hover
-                </p>
+                <p style="color: rgb(255, 119, 0); border-color: rgb(255, 119, 0)">Hover</p>
               </div>
             </div>
           </aside>
+
+          <!-- Main product section -->
           <section>
+            <!-- Mobile view options -->
             <div class="first-div-mobile">
               <div class="grid-2-icon">
                 <img src="./images/icons8-grid-2-24.png" alt="" />
@@ -219,59 +247,43 @@
                     <i class="fa fa-bars" style="color: gray"></i>
                   </div>
                   <div>
-                    <p style="font-size: 14px; color: gray">
-                      Showing 16 / 25 results
-                    </p>
+                    <p style="font-size: 14px; color: gray">Showing 16 / 25 results</p>
                   </div>
                 </div>
                 <div class="sort-div">
-                  <p>
-                    Sort by: price low to high
-                    <i class="fa-solid fa-caret-down"></i>
-                  </p>
+                  <p>Sort by: price low to high <i class="fa-solid fa-caret-down"></i></p>
                 </div>
               </div>
             </div>
 
+            <!-- Desktop view options -->
             <div class="first-div">
               <div class="nest-div">
                 <div>
                   <img src="./images/icons8-grid-2-24.png" alt="" />
-                  <i
-                    class="fa fa-bars"
-                    style="color: gray; font-size: 20px"
-                  ></i>
+                  <i class="fa fa-bars" style="color: gray; font-size: 20px"></i>
                 </div>
                 <div>
-                  <p style="font-size: 14px; color: gray">
-                    Showing 16 / 25 results
-                  </p>
+                  <p style="font-size: 14px; color: gray">Showing 16 / 25 results</p>
                 </div>
               </div>
               <div class="sort-div">
-                <p>
-                  Sort by:price low to high
-                  <i class="fa-solid fa-caret-down"></i>
-                </p>
+                <p>Sort by: price low to high <i class="fa-solid fa-caret-down"></i></p>
               </div>
             </div>
+
+            <!-- Products grid -->
             <div class="content"></div>
+
+            <!-- Show more button -->
             <div class="btn">
-              <button>
-                <i class="fa-solid fa-rotate-right"></i> Show more
-              </button>
+              <button><i class="fa-solid fa-rotate-right"></i> Show more</button>
             </div>
+
+            <!-- Pagination -->
             <div class="slides">
               <p><i class="fa fa-chevron-left"></i></p>
-              <p
-                style="
-                  background-color: rgb(255, 119, 0);
-                  color: white;
-                  border: none;
-                "
-              >
-                1
-              </p>
+              <p style="background-color: rgb(255, 119, 0); color: white; border: none">1</p>
               <p>2</p>
               <p class="hide">3</p>
               <p class="hide">4</p>
@@ -279,17 +291,18 @@
               <p style="border: none; background-color: transparent">...</p>
               <p><i class="fa fa-chevron-right"></i></p>
             </div>
+
+            <!-- Recently Viewed section -->
             <div class="viewed">
               <h2>Recently Viewed</h2>
               <div class="container">
                 <div class="grid">
+                  <!-- Each product card -->
                   <div class="card">
-                    <img
-                      src="./images/41lT6amLxQL._SR290,290_.jpg"
-                      alt="Front of men's Basic Tee in black."
-                    />
+                    <img src="./images/41lT6amLxQL._SR290,290_.jpg" alt="Lenovo P8 Tab3 plus" />
                     <div class="card-content">
                       <div>
+                        <!-- Product rating -->
                         <div>
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -299,6 +312,8 @@
                         </div>
                         <h3>Lenovo P8 Tab3 plus</h3>
                         <p class="hide-price">$329.99</p>
+
+                        <!-- Hover content -->
                         <div class="hide-card">
                           <div class="discount"><p>-50%</p></div>
                           <div class="new-price">
@@ -306,23 +321,17 @@
                             <p style="text-decoration: line-through">$150.00</p>
                           </div>
                           <button>Add to cart</button>
-                          <span
-                            ><i
-                              class="fa-regular fa-heart"
-                              style="color: #000"
-                            ></i
-                          ></span>
+                          <span><i class="fa-regular fa-heart" style="color: #000"></i></span>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div class="card">
-                    <img
-                      src="./images/41lT6amLxQL._SR290,290_.jpg"
-                      alt="Front of men's Basic Tee in black."
-                    />
+                    <img src="./images/41lT6amLxQL._SR290,290_.jpg" alt="Lenovo P8 Tab3 plus" />
                     <div class="card-content">
                       <div>
+                        <!-- Product rating -->
                         <div>
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -330,8 +339,10 @@
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star" style="color: gray"></i>
                         </div>
-                        <h3>Teclast X10 Quad Core 3G</h3>
-                        <p class="hide-price">$150.99</p>
+                        <h3>Lenovo P8 Tab3 plus</h3>
+                        <p class="hide-price">$329.99</p>
+
+                        <!-- Hover content -->
                         <div class="hide-card">
                           <div class="discount"><p>-50%</p></div>
                           <div class="new-price">
@@ -339,23 +350,17 @@
                             <p style="text-decoration: line-through">$150.00</p>
                           </div>
                           <button>Add to cart</button>
-                          <span
-                            ><i
-                              class="fa-regular fa-heart"
-                              style="color: #000"
-                            ></i
-                          ></span>
+                          <span><i class="fa-regular fa-heart" style="color: #000"></i></span>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div class="card">
-                    <img
-                      src="./images/41lT6amLxQL._SR290,290_.jpg"
-                      alt="Front of men's Basic Tee in black."
-                    />
+                    <img src="./images/41lT6amLxQL._SR290,290_.jpg" alt="Lenovo P8 Tab3 plus" />
                     <div class="card-content">
                       <div>
+                        <!-- Product rating -->
                         <div>
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -363,8 +368,10 @@
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star" style="color: gray"></i>
                         </div>
-                        <h3>BDF 10 inch Design 3G</h3>
-                        <p class="hide-price">$586.99</p>
+                        <h3>Lenovo P8 Tab3 plus</h3>
+                        <p class="hide-price">$329.99</p>
+
+                        <!-- Hover content -->
                         <div class="hide-card">
                           <div class="discount"><p>-50%</p></div>
                           <div class="new-price">
@@ -372,23 +379,17 @@
                             <p style="text-decoration: line-through">$150.00</p>
                           </div>
                           <button>Add to cart</button>
-                          <span
-                            ><i
-                              class="fa-regular fa-heart"
-                              style="color: #000"
-                            ></i
-                          ></span>
+                          <span><i class="fa-regular fa-heart" style="color: #000"></i></span>
                         </div>
                       </div>
                     </div>
                   </div>
+
                   <div class="card">
-                    <img
-                      src="./images/41lT6amLxQL._SR290,290_.jpg"
-                      alt="Front of men's Basic Tee in black."
-                    />
+                    <img src="./images/41lT6amLxQL._SR290,290_.jpg" alt="Lenovo P8 Tab3 plus" />
                     <div class="card-content">
                       <div>
+                        <!-- Product rating -->
                         <div>
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star"></i>
@@ -396,8 +397,10 @@
                           <i class="fa fa-star"></i>
                           <i class="fa fa-star" style="color: gray"></i>
                         </div>
-                        <h3>BDF 10 inch Octa Core</h3>
-                        <p class="hide-price">$50.00</p>
+                        <h3>Lenovo P8 Tab3 plus</h3>
+                        <p class="hide-price">$329.99</p>
+
+                        <!-- Hover content -->
                         <div class="hide-card">
                           <div class="discount"><p>-50%</p></div>
                           <div class="new-price">
@@ -405,29 +408,29 @@
                             <p style="text-decoration: line-through">$150.00</p>
                           </div>
                           <button>Add to cart</button>
-                          <span
-                            ><i
-                              class="fa-regular fa-heart"
-                              style="color: #000"
-                            ></i
-                          ></span>
+                          <span><i class="fa-regular fa-heart" style="color: #000"></i></span>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <!-- Repeat similar cards for other products... -->
                 </div>
               </div>
             </div>
           </section>
         </div>
+
         <br />
         <hr />
+
+        <!-- Footer keywords section -->
         <section class="footer1">
           <div>
             <h4 style="color: rgb(63, 62, 62)">Most Search Keywords</h4>
             <div class="div1">
               <div class="nest-div">
-                <p style="color: dimgrey">Laptops:</p>
+                <p class="text-gray-500">Laptops:</p>
                 <p>Appleo Laptop</p>
                 <p>|</p>
                 <p>Acero Laptop</p>
@@ -449,7 +452,7 @@
                 <p>HPO Laptop</p>
               </div>
               <div class="nest-div">
-                <p style="color: dimgrey">Tablet:</p>
+                <p class="text-gray-500">Tablet:</p>
                 <p>FUKIO Watches</p>
                 <p>|</p>
                 <p>Titan Watches</p>
@@ -469,7 +472,7 @@
                 <p>Luxury Watches</p>
               </div>
               <div class="nest-div">
-                <p style="color: dimgrey">Mobile phone:</p>
+                <p class="text-gray-500">Mobile phone:</p>
                 <p>Shoes</p>
                 <p>|</p>
                 <p>Casual Shoes</p>
@@ -495,9 +498,12 @@
         </section>
       </div>
     </main>
+
+    <!-- FOOTER -->
     <footer>
       <div class="footer-content">
         <div class="foot1">
+          <!-- Contact info -->
           <div>
             <h3>Contact Us</h3>
             <p><i class="fa-phone"></i> (+800) 123 456 7890</p>
@@ -505,6 +511,7 @@
             <p><i class="fa-phone"></i> Location store</p>
           </div>
 
+          <!-- Policies & info -->
           <div>
             <h3>Policies & Info</h3>
             <p>Terms Conditions</p>
@@ -514,6 +521,7 @@
             <p>Wholesable Policy</p>
           </div>
 
+          <!-- Quick links -->
           <div class="special">
             <h3>Quick Links</h3>
             <p>Seller Login</p>
@@ -523,6 +531,7 @@
             <p>Panel Seller FAQs</p>
           </div>
 
+          <!-- My account -->
           <div>
             <h3>My Account</h3>
             <p>Acceccories</p>
@@ -532,6 +541,7 @@
             <p>Bedside Tables</p>
           </div>
 
+          <!-- Subscribe form + social links -->
           <div class="special">
             <h3>Subscribe now</h3>
             <p>Country to popular belief of Lorem ipsum dolor sit amet.</p>
@@ -548,6 +558,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Footer bottom -->
         <div class="foot2">
           <p>Copyright &copy; 2018 Oleh Chabanov</p>
           <div>
@@ -556,16 +568,14 @@
             <img src="./images//discover-network-vector-logo.png" alt="" />
             <img src="./images/maestro-card-vector-logo.png" alt="" />
             <img src="./images/images.jpeg" alt="" />
-            <img
-              src="./images/paypal_2007-2014-logo_brandlogos.net_y26sz-768x207.png"
-              alt=""
-            />
+            <img src="./images/paypal_2007-2014-logo_brandlogos.net_y26sz-768x207.png" alt="" />
             <img src="./images/visa-logo.png" alt="" />
           </div>
         </div>
       </div>
     </footer>
 
+    <!-- Main JS file -->
     <script src="min.js"></script>
   </body>
 </html>

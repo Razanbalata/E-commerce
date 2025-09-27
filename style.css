@@ -11,7 +11,9 @@
 
 body {
   background-color: #f9f9f9;
+  overflow-x: hidden;
 }
+/*Header Section */
 .widMar {
   width: 90%;
   margin: auto;
@@ -139,7 +141,6 @@ header .second-header div.two .devices {
   overflow-y: hidden;
   height: 7vh;
 }
-
 .devices-wrapper {
   display: flex;
   align-items: center;
@@ -150,6 +151,53 @@ header .second-header div.two .devices {
   border-top: 1px solid #ccc;
 
 }
+.categories-dropdown {
+  position: relative;
+}
+.category-btn {
+  background-color: rgb(255, 119, 0);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  padding-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.categories-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-radius: 5px;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.categories-list h3 {
+  padding: 10px 15px;
+  margin: 0;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+}
+.categories-list h3:hover {
+  background-color: #ccc;
+  color: #000;
+}
+.categories-list.active {
+    max-height: 500px; 
+    opacity: 1; 
+    visibility: visible;
+    overflow: auto;
+  }
 
 .devices {
   display: flex;
@@ -158,13 +206,16 @@ header .second-header div.two .devices {
   color: #0d0a0a7d;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
-.devices::-webkit-scrollbar {
-  display: none;
+.devices h3 {
+  padding:5.3px 12px;
+  font-weight: 600;
 }
-
+.devices h3:hover {
+  background-color: #f1f1f1;
+  color: #000;
+  transition: 0.1s linear;
+}
 button.prev,
 button.next {
   background: #fff;
@@ -183,31 +234,7 @@ button.next {
   display: none;
 }
 
-.devices-mobile {
-  max-height: 0;
-  opacity: 0; 
-  visibility: hidden; 
-  overflow: hidden; 
-  flex-direction: column;
-  background: #fff;
-  position: relative;
-  z-index: 999;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-}
-.devices-mobile h3 {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-}
-.devices-mobile h3:hover {
-  background-color: #ddd;
-  transition: 0.2s;
-}
-#toggle-devices {
-  display: none;
-}
-.burger {
-  font-size: 1.5rem;
+.categories-dropdown {
   cursor: pointer;
   display: none; /* hidden desktop */
 }
@@ -221,15 +248,8 @@ button.next {
   color: #fff;
   transition: .5s;
 }
-.devices h3 {
-  padding:5.3px 12px;
-  font-weight: 600;
-}
-.devices h3:hover {
-  background-color: #f1f1f1;
-  color: #000;
-  transition: 0.1s linear;
-}
+
+/* Main Content */
 
 .settings-toggle {
   position: fixed;
@@ -265,6 +285,9 @@ main .all-content {
   align-items: self-start;
   margin-bottom: 20px;
 }
+
+/*SideBar Section*/
+
 .all-content aside {
   display: flex;
   flex-direction: column;
@@ -399,6 +422,8 @@ aside.open {
   visibility: visible;
   transition: 0.3s linear;
 }
+
+/* Cards Section */
 
 .all-content section {
   width: 80%;
@@ -559,7 +584,7 @@ img {
   color: #6b7280;
   margin: 0.25rem 0 0 0;
 }
-
+/* More Button */
 .all-content section .btn {
   padding: 20px 0;
 }
@@ -574,6 +599,7 @@ img {
   border: 1px solid #ccc;
   color: gray;
 }
+/*Slides Section*/
 .all-content section .slides {
   display: flex;
   justify-content: center;
@@ -593,6 +619,7 @@ img {
   border-color:var(--mainColor) !important ;
   transition: .3s;
 }
+/* Viewed Section */
 .all-content section .viewed h2 {
   margin-bottom: 20px;
   color: grey;
@@ -602,6 +629,8 @@ hr {
   opacity: 0.2;
   box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.5);
 }
+
+/* Search Keywords */
 
 main .footer1 {
   margin-top: 15px;
@@ -625,6 +654,9 @@ main .footer1 .div1 .nest-div {
 .div1 .nest-div p:hover {
   color: #000;
 }
+
+/* Footer Section */
+
 footer {
   background-color: #000000dd;
 }
@@ -729,6 +761,9 @@ p {
     transform: translate(-100%);
   }
 }
+ 
+/* Media Queries */
+
 
 @media (max-width: 1024px) {
   .first-header {
@@ -743,10 +778,7 @@ p {
   header .second-header .one form {
     width: 65% !important;
   }
-  
-  .div-one {
-    flex: 1 1 30%;
-  }
+
   .flexes.mg{
     justify-content: end;
     margin: 0;
@@ -793,7 +825,9 @@ p {
   .special form input {
     display: none;
   }
-
+  .div-one{
+    flex: 1 0 25%;
+  }
   form {
     width: auto; /* يخلي الكونتينر على قد الزر */
     padding: 10px;
@@ -806,6 +840,8 @@ p {
     padding-left: 0 !important;
     text-align: justify !important;
   }
+
+  
 }
 /* Mobile */
 @media (max-width: 667px) {
@@ -846,14 +882,14 @@ p {
   .two {
     display: none !important;
   }
-  .devices-mobile.active {
+  .categories-list.active {
     max-height: 500px; 
     opacity: 1; 
     visibility: visible;
     overflow: auto;
   }
 
-  .burger {
+  .categories-dropdown {
     display: block; 
   }
   .login{

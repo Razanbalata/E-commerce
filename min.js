@@ -140,10 +140,10 @@ products.forEach((containerProducts) => {
   mainSection.appendChild(container);
 });
 
-const burger = document.querySelector(".burger");
-const devices = document.querySelector(".devices-mobile");
+const dropdown = document.querySelector(".category-btn");
+const devices = document.querySelector(".categories-list");
 
-burger.addEventListener("click", () => {
+dropdown.addEventListener("click", () => {
   devices.classList.toggle("active");
 });
 
